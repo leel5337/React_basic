@@ -81,7 +81,6 @@ function TodoCreate() {
     const onToggle = () => setOpen(!open);
 
     return (
-
         <>
             {open && (
                 <InsertFormPositioner>
