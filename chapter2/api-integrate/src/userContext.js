@@ -126,7 +126,6 @@ export async function getUsers(dispatch) { //dispatch를 getUsers함수에 파�
         });
     }
 }
-
 export async function getUser(dispatch, id) {
     dispatch({ type: 'GET_USER' });
     try {
@@ -144,3 +143,4 @@ export async function getUser(dispatch, id) {
         });
     }
 }
+
