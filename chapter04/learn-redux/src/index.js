@@ -7,8 +7,9 @@ import './exercise';
 import { Provider } from "react-redux";
 import { createStore } from 'redux';
 import rootReducer from './modules';
+import { composeWithDevTools } from 'redux-devtools-extension'; // 리덕스 개발자 도구
 
-const store = createStore(rootReducer); // 스토어를 만들어준다
+const store = createStore(rootReducer, composeWithDevTools()); // 스토어를 만들어준다
 
 ReactDOM.render(
     <Provider store={store}>
