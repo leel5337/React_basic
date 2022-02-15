@@ -14,7 +14,11 @@ import { createBrowserHistory } from 'history';
 import createSagaMiddleware from 'redux-saga';
 
 const customHistory = createBrowserHistory();
-const sagaMiddleware = createSagaMiddleware(); // saga 미들웨어를 만들어준다
+const sagaMiddleware = createSagaMiddleware({ // saga 미들웨어를 만듭니다
+    context: {
+        history: customHistory
+    }
+});
 
 const store = createStore(
     rootReducer,
